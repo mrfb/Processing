@@ -9,8 +9,10 @@ application.windows64
 application.macosx
 out
 hidden
-examples
-libraries
-modes
-templates
-tools
+/examples
+/libraries
+/modes
+/templates
+/tools
+/_creativeprogramming
+/_studentwork
