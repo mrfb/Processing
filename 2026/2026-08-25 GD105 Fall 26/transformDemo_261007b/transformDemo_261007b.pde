@@ -20,3 +20,5 @@ square(width * .15, 0, width * .05);
 square(-width * .15, 0, width * .05);
 square(0, height * .15, width * .05);
 square(0, -height * .15, width * .05);
+
+save("output.png");

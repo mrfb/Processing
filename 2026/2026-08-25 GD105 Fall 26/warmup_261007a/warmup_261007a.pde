@@ -6,12 +6,14 @@ size(1000,1000);
 background(#FFFFFF);
 
 // Draws a kind of sunburst
+// these low-opacity yellow lines stacked on top of each
+// other create a kind of gradient effect
 int linesDrawn = 0;
 stroke(#FBFF00, 2);
 strokeWeight(5);
 translate(width/2, height/2);
 while(linesDrawn < 10000){
-  line(-random(width * 0.12, width * 0.35), 0,
+  line(-random(width * 0.15, width * 0.35), 0,
        -random(width * 0.36, width * 0.48), 0);
   rotate(TAU/100);
   linesDrawn++;
@@ -34,3 +36,5 @@ text("Wake up every day.", width * .50, height * 0.65);
 
 fill(#333333);
 text("...except Saturdays.", width * .50, height * 0.85);
+
+save("output.png");
