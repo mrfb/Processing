@@ -24,15 +24,22 @@ void draw(){
   
   // Pinwheel base stays still.
   stroke(#000000);
+  strokeWeight(10);
   line(width * .5 + offset, height * .5, width * .5, height * 0.9);
   
   // Pinwheel blades spin.
   translate(width * .5 + offset, height * .5);
+  strokeWeight(20);
   rotate((TAU / 24) * frameCount);
   stroke(#aa0000);
   line(width * -.1, height * -.1, width * .1, height * .1);
   stroke(#0000aa);
   line(width * .1, height * -.1, width * -.1, height * .1);
+  
+  // Pinwheel center
+  noStroke();
+  fill(#FFBF00);
+  circle(0, 0, 15);
   
   // Mask bottom of the pinwheel with a white square
   // to keep the bottom "flat"
