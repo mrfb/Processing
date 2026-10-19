@@ -2,8 +2,6 @@
 // 2026-10-19
 // A mix of things to demonstrate functions.
 
-
-
 void setup(){
   size(1000, 1000);
   background(#FFFFFF);
@@ -30,7 +28,7 @@ void draw(){
   
   // Yellow Series
   fill(#ffbf00, 30);
-  circle(xPos, yelPos, cSize);
+  //circle(xPos, yelPos, cSize);
   
   // Demonstrates where things are drawing.
   resetMatrix();
@@ -39,6 +37,4 @@ void draw(){
   rect(0, height*0.95, width, height * 0.05);
   xPos = frameCount % width;
   line(xPos, height * 0.95, xPos, height);
-  
-  
 }

@@ -17,7 +17,7 @@ void draw(){
   int cSize = 20;
   
   float bluePos = noise(frameCount * 0.001) * height;
-  float redPos = constrain(bluePos, height * .4, height * .6);
+  float redPos = map(bluePos, 0, height, height * .4, height * .6);
   float yelPos = random(height);
   
   // Blue Series
@@ -30,7 +30,7 @@ void draw(){
   
   // Yellow Series
   fill(#ffbf00, 30);
-  circle(xPos, yelPos, cSize);
+  //circle(xPos, yelPos, cSize);
   
   // Demonstrates where things are drawing.
   resetMatrix();
