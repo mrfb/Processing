@@ -15,12 +15,14 @@ void draw(){
   int cSize = 20;
   
   float bluePos = noise(frameCount * 0.001) * height;
-  float redPos = constrain(bluePos, height * .4, height * .6);
-  float yelPos = random(height);
+  float redPos = sin(frameCount * 0.01);
+  float yelPos = abs(sin(frameCount * 0.01));
+  redPos = map(redPos, -1, 1, height * .9, height * .1);
+  yelPos = map(yelPos, -1, 1, height * .9, height * .1);
   
   // Blue Series
   fill(#0000aa, 30);
-  circle(xPos, bluePos, cSize);
+  //circle(xPos, bluePos, cSize);
   
   // Red Series
   fill(#aa0000, 30);
@@ -28,7 +30,7 @@ void draw(){
   
   // Yellow Series
   fill(#ffbf00, 30);
-  //circle(xPos, yelPos, cSize);
+  circle(xPos, yelPos, cSize);
   
   // Demonstrates where things are drawing.
   resetMatrix();
