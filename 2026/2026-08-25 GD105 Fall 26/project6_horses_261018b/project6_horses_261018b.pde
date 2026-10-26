@@ -2,8 +2,6 @@
 // 2026-10-19
 // A mix of things to demonstrate functions.
 
-
-
 void setup(){
   size(1000, 1000);
   background(#FFFFFF);
@@ -18,7 +16,7 @@ void draw(){
   
   float bluePos = noise(frameCount * 0.001) * height;
   float redPos = map(bluePos, 0, height, height * .4, height * .6);
-  float yelPos = random(height);
+  float yelPos = map(sin(frameCount * 0.01), -1, 1, height * 1.0, height * 0.0);
   
   // Blue Series
   fill(#0000aa, 30);
@@ -26,11 +24,11 @@ void draw(){
   
   // Red Series
   fill(#aa0000, 30);
-  circle(xPos, redPos, cSize);
+  //circle(xPos, redPos, cSize);
   
   // Yellow Series
   fill(#ffbf00, 30);
-  //circle(xPos, yelPos, cSize);
+  circle(xPos, yelPos, cSize);
   
   // Demonstrates where things are drawing.
   resetMatrix();
