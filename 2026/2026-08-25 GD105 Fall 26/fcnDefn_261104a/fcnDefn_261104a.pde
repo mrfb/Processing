@@ -32,15 +32,14 @@ void draw(){
   //rotate(noiseTheta);
   rotate(frameCount * 0.001);
   
-  float lineStart;
-  float lineStartMin = 10;
+  // slowly moves outward over time
+  float lineStartMin = 50;
   float lineStartMax = 250;
-  lineStart = map(noise(frameCount * 0.01, 1), 0, 1, lineStartMin, lineStartMax);
+  float lineStart = map(noise(frameCount * 0.01, 1), 0, 1, lineStartMin, lineStartMax);
   
-  float lineEnd;
   float lineEndMin = 250;
-  float lineEndMax = 500;
-  lineEnd = map(noise(frameCount * 0.001, 2), 0, 1, lineEndMin, lineEndMax);
+  float lineEndMax = lineEndMin + (frameCount * 0.01);
+  float lineEnd = map(noise(frameCount * 0.001, 2), 0, 1, lineEndMin, lineEndMax);
   
   stroke(rightLine);
   line(lineStart, 0, lineEnd, 0);
