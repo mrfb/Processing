@@ -14,5 +14,6 @@ void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   penSize += e;
   penSize = constrain(penSize, 8, 128);
+  println(e);
   textSize(penSize);
 }
